@@ -1,0 +1,62 @@
+.VPHome .VPHero {
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 120px;
+    margin-bottom: 40px;
+}
+
+.VPHome .VPHero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    aspect-ratio: 1920 / 360;
+    background: url('/hero-bg.svg') center bottom / 100% 100% no-repeat;
+    opacity: 0.55;
+}
+
+.dark .VPHome .VPHero::before {
+    opacity: 0.3;
+}
+
+:root {
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(120deg, var(--vp-c-brand-1) 20%, #3fb950 100%);
+}
+
+.VPHome a.VPFeature:hover {
+    border-color: var(--vp-c-brand-1);
+    background-color: var(--vp-c-bg-elv);
+    transform: translateY(-2px);
+}
+
+.VPHome .VPFeature .icon {
+    background-color: var(--vp-c-bg);
+    border: 1px solid var(--vp-c-divider);
+}
+
+/* Ровно 5 карточек: ряд из 3 и ряд из 2 (по умолчанию VitePress делает 4 + 1) */
+@media (min-width: 960px) {
+    .VPHome .VPFeatures .item.grid-4:nth-child(1):nth-last-child(5),
+    .VPHome .VPFeatures .item.grid-4:nth-child(2):nth-last-child(4),
+    .VPHome .VPFeatures .item.grid-4:nth-child(3):nth-last-child(3) {
+        width: calc(100% / 3);
+    }
+
+    .VPHome .VPFeatures .item.grid-4:nth-child(4):nth-last-child(2),
+    .VPHome .VPFeatures .item.grid-4:nth-child(5):nth-last-child(1) {
+        width: 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .VPHome .VPFeature {
+        transition: none;
+    }
+
+    .VPHome a.VPFeature:hover {
+        transform: none;
+    }
+}
