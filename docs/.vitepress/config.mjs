@@ -85,12 +85,26 @@ for (const version of versions) {
 
 const locales = {};
 
+const uiText = {
+    en: {
+        docFooter: { prev: 'Previous page', next: 'Next page' },
+        outline: { label: 'On this page' },
+    },
+    ru: {
+        docFooter: { prev: 'Назад', next: 'Вперёд' },
+        outline: { label: 'На этой странице' },
+    },
+};
+
 for (const version of versions) {
     for (const [language] of languages) {
         locales[`${version}/${language}`] = {
             label: '',
             lang: language,
             link: `${prefix(version, language)}/`,
+            themeConfig: {
+                ...uiText[language],
+            },
         };
     }
 }
