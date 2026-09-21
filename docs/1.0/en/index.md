@@ -9,7 +9,7 @@ hero:
     text: Documentation
     tagline: 'A scripting toolchain for Minecraft'
     image:
-        src: /public/home-bg.png
+        src: /home-bg.png
 
 features:
     - icon: 📜
