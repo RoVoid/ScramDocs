@@ -143,6 +143,8 @@ for (const version of versions) {
 }
 
 export default defineConfig({
+    base: '/ScramDocs/',
+
     title: 'Scram :3',
     cleanUrls: true,
     locales,
