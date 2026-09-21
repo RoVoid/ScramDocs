@@ -1,0 +1,1 @@
+import{gt as e,n as t,rt as n}from"./chunks/framework.Bo_SezuH.js";var r=JSON.parse(`{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"1.0/ru/ui/index.md","filePath":"1.0/ru/ui/index.md"}`),i={name:`1.0/ru/ui/index.md`};function a(t,r,i,a,o,s){return e(),n(`div`)}var o=t(i,[[`render`,a]]);export{r as __pageData,o as default};

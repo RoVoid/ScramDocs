@@ -88,7 +88,7 @@ const flyouts = computed(() => [
     {
         id: 'language',
         label: theme.value.langMenuLabel || 'Change language',
-        button: '',
+        button: currentLanguageLabel.value,
         icon: 'vpi-languages',
         title: currentLanguageLabel.value,
         items: languages
@@ -202,16 +202,11 @@ onBeforeUnmount(() => {
 
 .flyout {
     position: relative;
+    margin-right: 15px;
 }
 
-.button {
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    height: var(--vp-nav-height);
-    color: var(--vp-c-text-1);
-    transition: color 0.5s;
-    cursor: pointer;
+.flyout .vpi-languages.option-icon {
+    margin-right: 3px;
 }
 
 .text {

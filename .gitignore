@@ -1,3 +1,4 @@
+.vitepress/cache
 docs/.vitepress/cache
 fabric-docs
 node_modules
