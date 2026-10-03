@@ -172,6 +172,10 @@ export default defineConfig({
                 link: 'https://github.com/TheUranofficial/Scram',
             },
         ],
+        outline: {
+            level: [1, 2, 3],
+            label: '',
+        },
         search: {
             provider: 'local',
             options: {
