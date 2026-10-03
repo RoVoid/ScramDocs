@@ -1,10 +1,8 @@
 ---
 layout: doc
 authors: [RoVoid]
-script: true
+title: UILabel
 ---
-
-# UILabel
 
 Класс для вывода текста
 
