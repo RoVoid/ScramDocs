@@ -173,8 +173,7 @@ export default defineConfig({
             },
         ],
         outline: {
-            level: [1, 2, 3],
-            label: '',
+            level: [1, 2],
         },
         search: {
             provider: 'local',

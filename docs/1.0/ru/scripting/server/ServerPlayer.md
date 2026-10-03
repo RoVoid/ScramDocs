@@ -1,6 +1,7 @@
 ---
 layout: doc
 authors: [RoVoid]
+script: true
 ---
 
 # method1
