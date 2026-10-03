@@ -1,35 +1,35 @@
 ---
-title: Scram Documentation
-description: 'Official documentation for Scram, a scripting toolchain for Minecraft'
+title: Scram Документация
+description: 'Официальные доки по Scram, набор инструментов для Minecraft карт'
 layout: home
 search: false
 
 hero:
     name: Scram
-    text: Documentation
-    tagline: 'A scripting toolchain for Minecraft'
+    text: Документация
+    tagline: 'Набор инструментов для Minecraft карт'
     image:
         src: /home-bg.png
 
 features:
     - icon: 📜
-      title: Scripting
-      details: 'Write scripts, subscribe to game events and use the API.'
+      title: Скрипты
+      details: 'API'
       link: ./scripting/
     - icon: 🤖
-      title: NPC
-      details: 'Create non-player characters and control their behavior and interaction.'
+      title: НИП (NPC)
+      details: 'Создавайте неигровых персонаж, контролируйте их поведение и характеристики'
       link: ./npc/
     - icon: 🧱
       title: Block
-      details: 'Add custom blocks and define how they look and behave.'
+      details: 'Триггер, регион'
       link: ./block/
     - icon: 🖼️
       title: HUD
-      details: 'Show information on screen: indicators, text and overlays.'
+      details: 'Накладывайте на экран игроков'
       link: ./hud/
     - icon: 🪟
       title: UI
-      details: 'Build menus and interface screens for players.'
+      details: 'Собирайте свои меню и интерфейсы'
       link: ./ui/
 ---

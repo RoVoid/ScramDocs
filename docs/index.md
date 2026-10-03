@@ -4,8 +4,8 @@ title: Documentation
 head:
     - - meta
       - http-equiv: refresh
-        content: 0;url=./0.2/en/
+        content: 0;url=./1.0/en/
     - - script
       - {}
-      - "location.replace('./0.2/en/' + location.search + location.hash);"
+      - "location.replace('./1.0/en/' + location.search + location.hash);"
 ---
