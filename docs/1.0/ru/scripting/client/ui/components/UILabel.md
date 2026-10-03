@@ -4,6 +4,10 @@ authors: [RoVoid]
 script: true
 ---
 
+# UILabel
+
+Класс для вывода текста
+
 ## method1
 
 это метод просто так
