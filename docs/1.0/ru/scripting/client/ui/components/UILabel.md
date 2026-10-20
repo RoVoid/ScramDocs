@@ -4,6 +4,8 @@ authors: [RoVoid]
 title: UILabel
 ---
 
+# UILabel
+
 Класс для вывода текста
 
 ## method1

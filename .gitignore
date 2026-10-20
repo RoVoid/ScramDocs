@@ -1,5 +1,6 @@
 .vitepress/cache
 docs/.vitepress/cache
+docs/.vitepress/dist
 fabric-docs
 node_modules
 *.zip
