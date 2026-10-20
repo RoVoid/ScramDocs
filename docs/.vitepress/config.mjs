@@ -156,12 +156,46 @@ for (const version of versions) {
     }
 }
 
+const languageCodes = new Set([...languages].map(([language]) => language));
+
+function localeLinks(md) {
+    md.core.ruler.push('locale_links', (state) => {
+        const rel = state.env.relativePath;
+        if (!rel) return;
+
+        const [version, language] = rel.split('/');
+        if (!versions.includes(version)) return;
+        if (!languageCodes.has(language)) return;
+
+        const root = `/${version}/${language}`;
+
+        for (const block of state.tokens) {
+            if (block.type !== 'inline' || !block.children) continue;
+
+            for (const token of block.children) {
+                if (token.type !== 'link_open') continue;
+
+                const href = token.attrGet('href');
+                if (!href || !href.startsWith('/') || href.startsWith('//')) continue;
+                if (versions.some((v) => href.startsWith(`/${v}/`))) continue;
+                if (/\.\w+([?#]|$)/.test(href) && !/\.md([?#]|$)/.test(href)) continue;
+
+                token.attrSet('href', root + href);
+            }
+        }
+    });
+}
+
 export default defineConfig({
     base: '/ScramDocs/',
 
     title: 'Scram :3',
     cleanUrls: true,
     locales,
+
+    markdown: {
+        config: localeLinks,
+    },
 
     themeConfig: {
         nav: [{ component: 'VersionLanguageDropdown' }],
